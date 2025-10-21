@@ -1,0 +1,153 @@
+/* Author Matthew Kolbe 10/19/2025 */
+/* created global variables */
+:root {
+    --primary-color: #a5bbca;
+    --secondary-color: #e7d6cc;
+    --background-color: #f6f0e7;
+    --text-color: #314951;
+}
+
+/* changed the background color */
+body {
+    background-color: var(--primary-color);
+}
+
+/* changed the font size and made the text bold. centered text */
+nav {
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* centered the text on both nav id's */
+#nav1 {
+    text-align: center;
+}
+
+#nav2 {
+    text-align: center;
+}
+
+/* have all img's float left. create space for the text */
+img {
+    float: left;
+    margin-right: 5px;
+}
+
+/* gave h1 relative positioning in case i needed an anchor for an absolute. changed the color scheme through global variables. changed attributes of the font and centered it. made a bottom border. */
+h1 {
+    position: relative;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 4px solid black;
+}
+
+/* made a bottom border */
+h2 {
+    border-bottom: 3px solid black;
+}
+
+#h22 {
+    position: relative;
+}
+
+/* created a full border. pushed the sections away from each other. autoed the size to flow with content. aligned the text to the left for changes.align the sections in a block. changed the background color for accessibility */
+section {
+    border: 2px solid black;
+    top: 50px;
+    left: 6px;
+    width: auto;
+    height: auto;
+    text-align: left;
+    display: block;
+    background-color: var(--background-color);
+}
+
+/* hid the pictures on the base level */
+#trophy {
+    display: none;
+}
+
+#laugh {
+    display: none;
+}
+
+/* base level media tag. changed the display to made sections appear beside each other. width to keep things tidy. aligned the h2 to the center for an extra change.*/
+@media (min-width: 576px) {
+    section {
+        display: inline-block;
+        width: 49%;
+    }
+
+    h2 {
+        text-align: center;
+    }
+}
+
+/* second level. aligned the sections to be on top of each other. pushed the sections to the middle and center text alignment. made the robot and tin img's display as block. pushed them to the right and increased the size of robot img. made the paragraphs font size bigger, align text to the center, and pushed it underneath the img. decrease the top margin to get the text closer to the img.*/
+@media (min-width: 720px) {
+    section {
+        display: block;
+        margin-left: 200px;
+        text-align: center;
+    }
+
+    #robot {
+        display: block;
+        margin-left: 13%;
+        width: 250px;
+    }
+
+    #tin {
+        display: block;
+        margin-left: 17%;
+    }
+
+    p {
+        font-size: 16px;
+        text-align: center;
+        margin-top: 300px;
+    }
+
+    #para {
+        margin-top: 200px;
+    }
+}
+
+/* top level. pushed both nav id's in opposite directions. absolute position the robot img to allow pictures to sit side by side. made the second img appear and float to the right. float tin img to the right. absolute position laugh img to set it beside tin img. */
+@media (min-width: 992px) {
+    #nav1 {
+        text-align: left;
+        font-size: 16px;
+    }
+
+    #nav2 {
+        text-align: right;
+        font-size: 16px;
+    }
+
+    #robot {
+        position: absolute;
+        margin-left: 5px;
+    }
+
+    #trophy {
+        display: block;
+        float: right;
+        margin-right: 5px;
+    }
+
+    #tin {
+        float: right;
+        margin-right: 5px;
+    }
+
+    #laugh {
+        display: block;
+        position: absolute;
+        margin-left: 5px;
+    }
+}
